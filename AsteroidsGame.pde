@@ -13,3 +13,16 @@ public void draw()
   omg.show();
 }
 
+public void keyTyped()
+{
+	if (key == 'h')
+	{
+		omg.setDirectionX(0);
+		omg.setDirectionY(0);
+	}
+
+	if (key == 'w')
+	{
+		omg.move();	}
+}
+
