@@ -6,22 +6,21 @@ public void setup()
 {
   //your code here
   size(500, 500);
-  omg = new Spaceship(); 
   for (int i = 0; i < starss.length; i++)
   {
   	starss[i] = new Stars();
   }
-
+	omg = new Spaceship(); 
 }
 public void draw() 
 {
   //your code here
-  background(255);
-  omg.show();
+  background(0);
   for (int i = 0; i < starss.length; i++)
   {
   	starss[i].show();
   }
+  omg.show();
 }
 
 public void keyTyped()
@@ -32,10 +31,21 @@ public void keyTyped()
 		omg.setDirectionY(Math.random()*361);
 		omg.setX((int)(Math.random()*500));
 		omg.setY((int)(Math.random()*500));
+		omg.setPointDirection((int)(Math.random()*361));
 	}
 
+	if (key == 'a')
+	{
+		omg.turn(-5);	
+	}
+	if (key == 'd')
+	{
+		omg.turn(5);
+	}
 	if (key == 'w')
 	{
-		omg.move();	}
+		omg.accelerate(.01);
+		omg.move();
+	}
 }
 
