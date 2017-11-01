@@ -3,13 +3,16 @@ class Spaceship extends Floater
     //your code here
     Spaceship()
     {
-    	corners = 15;
+    	corners = 4;
     	//Spaceship/rocket = 14 corners
     	//int[] xS = {0, 6, 6, 12, 6, 6, 3, 0, -3, -6, -6, -12, -6, -6};
     	//int[] yS = {-20, -10, -7, 3, 3, 6, 9, 6, 9, 6, 3, 3, -7, -10};
     	//xmas tree = 15
-    	int[] xS = {0, 9, 3, 12, 6, 18, 3, 3, -3, -3, -18, -6, -12, -3, -9};
-    	int[] yS = {-18, -9, -9, 0, 0, 9, 9, 18, 18, 9, 9, 0, 0, -9, -9};
+    	//int[] xS = {0, 9, 3, 12, 6, 18, 3, 3, -3, -3, -18, -6, -12, -3, -9};
+    	//int[] yS = {-18, -9, -9, 0, 0, 9, 9, 18, 18, 9, 9, 0, 0, -9, -9};
+
+    	int[] xS = {-8, 16, -8, -2};
+    	int[] yS = {-8, 0, 8, 0};
     	xCorners = xS;
     	yCorners = yS;
 

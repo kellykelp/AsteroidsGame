@@ -1,5 +1,6 @@
 Spaceship omg;
 Stars[] starss = new Stars[400];
+boolean turningIshappening = false;
 
  //your variable declarations here
 public void setup() 
@@ -21,12 +22,19 @@ public void draw()
   	starss[i].show();
   }
   omg.show();
+
+  // if (keyPressed == true && key == 'w')
+  // {  		
+  		omg.move(); 
+
+  // }
 }
 
 public void keyTyped()
 {
 	if (key == 'h')
 	{
+		background(0);
 		omg.setDirectionX(Math.random()*361);
 		omg.setDirectionY(Math.random()*361);
 		omg.setX((int)(Math.random()*500));
@@ -44,8 +52,8 @@ public void keyTyped()
 	}
 	if (key == 'w')
 	{
-		omg.accelerate(.01);
-		omg.move();
+		omg.accelerate(.1);
 	}
+
 }
 
