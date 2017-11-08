@@ -1,6 +1,7 @@
 Spaceship omg;
 Stars[] starss = new Stars[400];
 boolean turningIshappening = false;
+Asteroid bob; 
 
  //your variable declarations here
 public void setup() 
@@ -12,22 +13,20 @@ public void setup()
   	starss[i] = new Stars();
   }
 	omg = new Spaceship(); 
+	bob = new Asteroid(); 
 }
 public void draw() 
 {
-  //your code here
-  background(0);
-  for (int i = 0; i < starss.length; i++)
-  {
-  	starss[i].show();
-  }
-  omg.show();
-
-  // if (keyPressed == true && key == 'w')
-  // {  		
-  		omg.move(); 
-
-  // }
+	//your code here
+	background(0);
+	for (int i = 0; i < starss.length; i++)
+	{
+  		starss[i].show();
+  	}
+	omg.show();
+	bob.show();
+		
+	omg.move(); 
 }
 
 public void keyTyped()
@@ -44,15 +43,15 @@ public void keyTyped()
 
 	if (key == 'a')
 	{
-		omg.turn(-5);	
+		omg.turn(-10);	
 	}
 	if (key == 'd')
 	{
-		omg.turn(5);
+		omg.turn(10);
 	}
 	if (key == 'w')
 	{
-		omg.accelerate(.1);
+		omg.accelerate(.12);
 	}
 
 }
