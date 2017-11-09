@@ -1,6 +1,5 @@
 class Spaceship extends Floater  
 {   
-    //your code here
     Spaceship()
     {
     	corners = 4;
@@ -11,12 +10,13 @@ class Spaceship extends Floater
     	//int[] xS = {0, 9, 3, 12, 6, 18, 3, 3, -3, -3, -18, -6, -12, -3, -9};
     	//int[] yS = {-18, -9, -9, 0, 0, 9, 9, 18, 18, 9, 9, 0, 0, -9, -9};
 
-    	int[] xS = {-8, 16, -8, -2};
-    	int[] yS = {-8, 0, 8, 0};
+    	int[] xS = {-16, 32, -16, -4};
+    	int[] yS = {-16, 0, 16, 0};
     	xCorners = xS;
     	yCorners = yS;
 
-    	myColor = color(10, 130, 0);
+    	//myColor = color(10, 130, 0);
+        myColor = color(165, 231, 255);
     	myCenterX = myCenterY = 250;
     	myDirectionX = myDirectionY = 0;
     	myPointDirection = 0;

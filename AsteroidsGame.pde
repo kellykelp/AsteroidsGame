@@ -1,31 +1,36 @@
-Spaceship omg;
+Spaceship omg = new Spaceship();
 Stars[] starss = new Stars[400];
-boolean turningIshappening = false;
-Asteroid bob; 
+Asteroid[] bob = new Asteroid[20]; 
 
- //your variable declarations here
 public void setup() 
 {
-  //your code here
-  size(500, 500);
-  for (int i = 0; i < starss.length; i++)
-  {
-  	starss[i] = new Stars();
-  }
-	omg = new Spaceship(); 
-	bob = new Asteroid(); 
+	size(800, 600);
+	for (int i = 0; i < starss.length; i++)
+	{
+		starss[i] = new Stars();
+	}
+
+	for (int i = 0; i < bob.length; i++)
+	{
+		bob[i] = new Asteroid();
+	}
 }
+
 public void draw() 
 {
-	//your code here
-	background(0);
+	background(28, 27, 71);
 	for (int i = 0; i < starss.length; i++)
 	{
   		starss[i].show();
   	}
-	omg.show();
-	bob.show();
-		
+
+  	for (int i = 0; i < bob.length; i++)
+  	{
+  		bob[i].show();
+  		bob[i].move();
+  	}
+
+	omg.show();	
 	omg.move(); 
 }
 
@@ -34,25 +39,16 @@ public void keyTyped()
 	if (key == 'h')
 	{
 		background(0);
-		omg.setDirectionX(Math.random()*361);
-		omg.setDirectionY(Math.random()*361);
+		omg.setDirectionX(0);
+		omg.setDirectionY(0);
 		omg.setX((int)(Math.random()*500));
 		omg.setY((int)(Math.random()*500));
-		omg.setPointDirection((int)(Math.random()*361));
+		omg.setPointDirection((int)(Math.random()*360));
 	}
 
-	if (key == 'a')
-	{
-		omg.turn(-10);	
-	}
-	if (key == 'd')
-	{
-		omg.turn(10);
-	}
-	if (key == 'w')
-	{
-		omg.accelerate(.12);
-	}
+	if (key == 'a') { omg.turn(-10); }
+	if (key == 'd') { omg.turn(10); }
+	if (key == 'w') { omg.accelerate(0.15); }
 
 }
 
