@@ -3,8 +3,9 @@ Stars[] starss = new Stars[500];
 //Asteroid[] bob = new Asteroid[20]; 
 
 ArrayList <Asteroid> rocks;
-rocks = new ArrayList <Asteroid> ();
-Asteroid someRock = new Asteroid(20);
+// Declaratiobns are inside functions, never outside!
+//  rocks = new ArrayList <Asteroid>();
+// Asteroid someRock = new Asteroid(20);
 
 public void setup() 
 {
@@ -32,11 +33,17 @@ public void draw()
   		starss[i].show();
   	}
 
-  	for (int i = 0; i < bob.length; i++)
+  	for (int i = 0; i < rocks.length; i++)
   	{
-  		bob[i].show();
-  		bob[i].move();
+  		rocks[i].show();
+  		rocks[i].move(); 
   	}
+
+  	// for (int i = 0; i < bob.length; i++)
+  	// {
+  	// 	bob[i].show();
+  	// 	bob[i].move();
+  	// }
 
 	omg.show();	
 	omg.move(); 
