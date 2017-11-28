@@ -2,7 +2,7 @@ Spaceship omg = new Spaceship();
 Stars[] starss = new Stars[500];
 //Asteroid[] bob = new Asteroid[20]; 
 
-ArrayList <Asteroid> rocks;
+ArrayList <Asteroid> rocks = new ArrayList <Asteroid> (); 
 // Declaratiobns are inside functions, never outside!
 //  rocks = new ArrayList <Asteroid>();
 // Asteroid someRock = new Asteroid(20);
@@ -10,16 +10,16 @@ ArrayList <Asteroid> rocks;
 public void setup() 
 {
 	size(800, 600);
-	rocks = new ArrayList <Asteroid>(); 
-	Asteroid somerock = new Asteroid(20);
+	// rocks = new ArrayList <Asteroid>(); 
+	// Asteroid somerock = new Asteroid(20);
 	for (int i = 0; i < starss.length; i++)
 	{
 		starss[i] = new Stars();
 	}
 
-	for (int i = 0; i < rocks.size(); i++)
+	for (int i = 0; i < 20; i++)
 	{
-		rocks.add(someRock); 
+		rocks.add(new Asteroid()); 
 	}
 	// for (int i = 0; i < bob.length; i++)
 	// {
