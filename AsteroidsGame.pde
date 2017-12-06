@@ -1,5 +1,6 @@
 Spaceship rocket = new Spaceship();
 Stars[] star = new Stars[500];
+Bullet shoot = new Bullet(rocket); 
 //Asteroid[] bob = new Asteroid[20]; 
 
 ArrayList <Asteroid> rocks = new ArrayList <Asteroid> (); 
@@ -49,6 +50,10 @@ public void draw()
 
 	rocket.show();	
 	rocket.move();
+
+	shoot.show();
+	shoot.move();
+
 
   	// for (int i = 0; i < bob.length; i++)
   	// {
