@@ -1,10 +1,11 @@
 Spaceship rocket = new Spaceship();
 Stars[] star = new Stars[500];
-Bullet shoot = new Bullet(rocket); 
-//Asteroid[] bob = new Asteroid[20]; 
+//Bullet shoot = new Bullet(rocket); 
 
 ArrayList <Asteroid> rocks = new ArrayList <Asteroid> (); 
 // Declarations are inside functions, never outside!
+
+ArrayList <Bullet> pewpew = new ArrayList <Bullet> (); 
 
 public void setup() 
 {
@@ -20,10 +21,6 @@ public void setup()
 		rocks.add(new Asteroid()); 
 	}
 
-	// for (int i = 0; i < bob.length; i++)
-	// {
-	// 	bob[i] = new Asteroid();
-	// }
 }
 
 public void draw() 
@@ -51,16 +48,22 @@ public void draw()
 	rocket.show();	
 	rocket.move();
 
-	shoot.show();
-	shoot.move();
+	for (int i = 0; i < pewpew.size(); i++)
+	{
+		pewpew.get(i).show();
+		pewpew.get(i).move();
+	}
 
+	for (int i = 0; i < pewpew.size(); i++)
+	{
+		if ((pewpew.get(i).getX() > 800) || (pewpew.get(i).getY() > 600))
+		{
+			pewpew.remove(i);
+		}
+	}
 
-  	// for (int i = 0; i < bob.length; i++)
-  	// {
-  	// 	bob[i].show();
-  	// 	bob[i].move();
-  	// } 
 }
+
 
 public void keyTyped()
 {
@@ -78,5 +81,10 @@ public void keyTyped()
 	if (key == 'd') { rocket.turn(10); }
 	if (key == 'w') { rocket.accelerate(0.15); }
 
+	if (key == 'v')
+	{
+		pewpew.add(new Bullet(rocket));
+		pewpew.get(pewpew.size()-1).show();
+		pewpew.get(pewpew.size()-1).move();
+	}
 }
-
