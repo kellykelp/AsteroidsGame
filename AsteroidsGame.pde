@@ -54,15 +54,25 @@ public void draw()
 		pewpew.get(i).move();
 	}
 
-	for (int i = 0; i < pewpew.size(); i++)
-	{
-		if ((pewpew.get(i).getX() > 800) || (pewpew.get(i).getY() > 600))
+	for (int ni = 0; ni < pewpew.size(); ni++)
 		{
-			pewpew.remove(i);
+			if ((pewpew.get(ni).getX() > 800) || (pewpew.get(ni).getY() > 600))
+			{
+				pewpew.remove(ni);
+			}
 		}
-	}
 
+
+	// for (int i = 0; i < pewpew.size(); i++)
+	// {
+	// 	if ((pewpew.get(i).getX() > 800) || (pewpew.get(i).getY() > 600))
+	// 	{
+	// 		pewpew.remove(i);
+	// 	}
+	// }
 }
+
+
 
 
 public void keyTyped()
@@ -84,7 +94,7 @@ public void keyTyped()
 	if (key == 'v')
 	{
 		pewpew.add(new Bullet(rocket));
-		pewpew.get(pewpew.size()-1).show();
-		pewpew.get(pewpew.size()-1).move();
+		// pewpew.get(pewpew.size()-1).show();
+		// pewpew.get(pewpew.size()-1).move();
 	}
 }

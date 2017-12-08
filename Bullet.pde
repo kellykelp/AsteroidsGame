@@ -25,6 +25,6 @@ class Bullet extends Floater {
 	{
 		fill(color(255, 0, 0));
 		stroke(color(255, 0, 0));
-    	ellipse((int)myCenterX, (int)myCenterY, 10, 5);
+    	ellipse((int)myCenterX, (int)myCenterY, 5, 5);
 	}
 }
