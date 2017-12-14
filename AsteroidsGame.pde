@@ -1,6 +1,6 @@
 Spaceship rocket = new Spaceship();
 Stars[] star = new Stars[500];
-
+int count = 0; 
 ArrayList <Asteroid> rocks = new ArrayList <Asteroid> (); 
 // Declarations are inside functions, never outside!
 
@@ -41,6 +41,7 @@ public void draw()
   		if (dist(rocket.getX(), rocket.getY(), rocks.get(i).getX(), rocks.get(i).getY()) < 20)
   		{
   			rocks.remove(i);
+  			count--; 
   		}
 
   		for (int j = 0; j < pewpew.size(); j++)
@@ -49,6 +50,7 @@ public void draw()
   			{
   				rocks.remove(i); 
   				pewpew.remove(j);
+  				count++; 
   				break;
   			}
   		}
@@ -71,6 +73,10 @@ public void draw()
 			pewpew.remove(i);
 		}
 	}
+
+	textSize(20);
+	fill(255);
+	text("Score: " + count, 50, 50); 
 }
 
 public void keyTyped()
